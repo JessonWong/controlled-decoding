@@ -1,0 +1,37 @@
+{
+  "source_files": 101,
+  "portability_adjusted": [
+    "benchmark_data.py",
+    "inference_gemini_sampled.py",
+    "inference_openrouter.py",
+    "scripts/audit_release.py",
+    "test/test_pre_logits_sampled_openrouter.py",
+    "training/collect_outcome_regret_pairs.py",
+    "training/collect_target_only_action_pairs.py",
+    "training/pre_logits_sampled_openrouter.py",
+    "training/pre_logits_sampled_openweight.py"
+  ],
+  "removed_from_public_release": [
+    "vendored GPTFuzz source and seed prompts",
+    "prompt-level baseline implementations and adapters",
+    "third-party evaluator code and prompt templates",
+    "legacy JULI-only sampling and inference entrypoints",
+    "the historical targeted-outcome audit bound to removed evaluator source"
+  ],
+  "initial_export_excluded": [
+    "original Git history and remotes",
+    "credentials",
+    "logs",
+    "experiment outputs",
+    "model weights and tokenizer snapshots",
+    "benchmark corpora",
+    "cluster job scripts",
+    "manuscript sources",
+    "private notes"
+  ],
+  "method_changes": "The controller, reconstruction, risk gate, and training objectives are unchanged. A token-alignment helper was independently reimplemented to remove legacy code lineage.",
+  "release_helpers": [
+    "scripts/audit_release.py",
+    "scripts/recover_mc_counts.py"
+  ]
+}
